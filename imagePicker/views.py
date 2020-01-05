@@ -10,7 +10,7 @@ def fetchimage(request, item_id):
     bucket_name = "gamification-cos-standard-tkq"
     try:
         f = item_id + '.jpg'
-	print('Trying to find ',f)
+	#print('Trying to find ',f)
         img_data = get_item(bucket_name=bucket_name, item_name=f)
         if img_data:
             return HttpResponse(img_data, content_type="image/jpg")
@@ -23,7 +23,7 @@ def fetchimage(request, item_id):
 def fetchallimages(request):
     bucket_name = "gamification-cos-standard-tkq"
     try:
-	print('Trying to find ALL images')
+	#print('Trying to find ALL images')
         img_data = get_all_items(bucket_name=bucket_name)
         if img_data:
             return HttpResponse(img_data, content_type="image/jpg")
