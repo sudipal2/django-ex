@@ -2,7 +2,7 @@ import os
 import json
 import requests
 import ibm_boto3
-import urllib2
+#import urllib2
 from ibm_botocore.client import Config, ClientError
 
 try:
