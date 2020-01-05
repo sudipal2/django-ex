@@ -27,10 +27,10 @@ def fetchallimages(request):
         i = 1
         img_ct = 1000
         while i < 6:
-	    i += 1
-	    img_ct += 1
+            i += 1
+            img_ct += 1
             #img_data = get_all_items(bucket_name=bucket_name)
-	    img_data = get_item(bucket_name=bucket_name, img_ct)
+            img_data = get_item(bucket_name=bucket_name, img_ct)
             if img_data:
                 return HttpResponse(img_data, content_type="image/jpg")
             else:
