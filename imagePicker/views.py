@@ -31,8 +31,8 @@ def fetchallimages(request):
             img_ct += 1
             #img_data = get_all_items(bucket_name=bucket_name)
             #img_name = str(img_ct) + '.jpg'
-            img_name = "sample image"
-            print("IMAGE NAME: ".img_name)
+            img_name = 'sample image'
+            print("IMAGE NAME: ". img_name)
             #img_data = get_item(bucket_name=bucket_name, item_name=img_name)
             if img_data:
                 return HttpResponse(img_data, content_type="image/jpg")
