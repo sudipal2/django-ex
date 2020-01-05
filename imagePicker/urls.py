@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 
 from . import views
-print "Step 1 from url.py"
+#print "Step 1 from url.py"
 
 urlpatterns = [
     url(r'^$', views.index),
