@@ -9,7 +9,7 @@ try:
     _credentials_string = os.environ.get('IBM_CLOUD_STO_CREDENTIALS')
     print('credentials :: ', _credentials_string)
     cos_service_credentials = json.loads(_credentials_string)
-    print "Service START Point    "
+    #print "Service START Point    "
     # Request detailed enpoint list
     endpoints = requests.get(cos_service_credentials['endpoints']).json()
 
@@ -19,7 +19,7 @@ try:
     auth_endpoint = "https://" + iam_host + "/oidc/token"
     service_endpoint = "https://" + cos_host
    
-    print "Service End Point    ",service_endpoint
+    #print "Service End Point    ",service_endpoint
     # Create resource
     cos = ibm_boto3.resource("s3",
         ibm_api_key_id=cos_service_credentials['apikey'],
@@ -49,7 +49,7 @@ def get_all_items(bucket_name):
     id_f = requests.get(itemid_url)
     print (id_f.text)
 
-    print("Retrieving All from bucket {1}".format(item_name, bucket_name))
+    #print("Retrieving All from bucket {1}".format(item_name, bucket_name))
     try:
         obj = cos.Object(bucket_name, item_name).get()
         return obj['Body'].read()
